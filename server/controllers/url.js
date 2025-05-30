@@ -31,7 +31,7 @@ async function handleShortenedUrl(req, res) {
     { new: true }
   );
 
-  res.redirect(`http://${entry.requiredUrl}`);
+  res.redirect(`${entry.requiredUrl}`);
 }
 
 async function handleAnalytics(req, res) {
