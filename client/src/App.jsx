@@ -10,7 +10,7 @@ function App() {
 
   const handleShortenUrl = async () => {
     try {
-      const response = await fetch("http://localhost:3500/", {
+      const response = await fetch("https://shorthub.onrender.com/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -23,7 +23,7 @@ function App() {
       }
 
       const data = await response.json();
-      setShortenedUrl(`http://localhost:3500/${data.id}`);
+      setShortenedUrl(`https://shorthub.onrender.com/${data.id}`);
     } catch (error) {
       console.error("Error shortening URL:", error);
     }
