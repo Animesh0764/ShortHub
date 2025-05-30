@@ -30,7 +30,16 @@ function App() {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "100vh",
+        width: "100%"
+      }}
+    >
       <h1>URL Shortener</h1>
       <input
         type="text"
@@ -39,7 +48,7 @@ function App() {
         onChange={handleInputChange}
         style={{ width: "300px", padding: "10px", marginRight: "10px" }}
       />
-      <button onClick={handleShortenUrl} style={{ padding: "10px" }}>
+      <button onClick={handleShortenUrl} style={{ padding: "10px", marginTop: "10px" }}>
         Shorten URL
       </button>
       {shortenedUrl && (
